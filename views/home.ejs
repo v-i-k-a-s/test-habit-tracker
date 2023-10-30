@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="/css/home.css">
+<body>
+    <section>
+        <!-- <h1>Habbits</h1> -->
+        <div class="create-habbit-formContainer">
+            <form action="/create-habbit" method="POST" id="createHabbitForm">
+                <input type="text" id="createHabbit" name="habbit" placeholder="Create habbit" required>
+                <button class="btn">Create</button>
+            </form>
+        </div>  
+        <ul id="habbitContainer">
+        <% for(let h of habbit){%>
+            <%- include("create_habbit", {h:h}) -%>
+        <%}%>
+       </ul>
+    </section>
+    <script src="../assets/js/habbit.js"></script>
+    
+</body>

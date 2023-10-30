@@ -1,0 +1,16 @@
+
+<li id="habbit-<%= h._id %>">
+    <p><%= h.habbit %></p>
+    <div id="linkRoute">
+        <div class="updateHabbit">
+            <button class="update-btn"><a href="/update/habbit/<%= h._id %>">Update</a></button>
+            
+        </div>
+        <div >
+            <a href="/delete_habbit/<%= h._id %>" class="delete-button">
+                <i class="fa-solid fa-trash"></i>
+            </a>
+        </div>
+    </div>
+    
+</li>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- External CSS files for styling -->
+    <link rel="stylesheet" type="text/css" href="/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="/css/header.css">
+    <link rel="stylesheet" type="text/css" href="/css/footer.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Font Awesome icons -->
+    <script src="https://kit.fontawesome.com/1013d8b8e8.js" crossorigin="anonymous"></script>
+    
+
+    <!-- Dynamic CSS styles included using EJS -->
+    <%- style %>
+
+    <!-- Page title -->
+    <title><%= title %></title>
+</head>
+<body>
+    <!-- Navigation section, including header template -->
+    <%- include("_header") %>
+
+    <!-- Main content section -->
+    <%- body %>
+
+
+    <!-- Footer section, including footer template -->
+    <%- include("_footer") %>
+
+    <!-- Dynamic JavaScript code included using EJS -->
+    <%- script %>
+
+    <!-- External JavaScript file for behavior -->
+    <script type="text/javascript" src="/js/layout.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+console.log('Layout js is connected');

@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
-const env = require('./environment');
 require('dotenv').config();
 
-const mongoURI = `mongodb://127.0.0.1:27017/${env.db}`;
 // setting the url for database connection
 mongoose.connect(process.env.MONGODB_URL);
 mongoose.set('strictQuery', false);

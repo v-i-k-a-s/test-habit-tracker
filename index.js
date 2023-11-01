@@ -1,6 +1,5 @@
 const express = require('express');
-const env = require('./config/environment');
-const logger = require('morgan');
+// const logger = require('morgan');
 require('dotenv').config();
 const port = process.env.PORT || 8000;
 const app = express();
@@ -13,10 +12,10 @@ const db = require('./config/mongoose');
 
 app.use(express.urlencoded());
 app.use(expressLayout);
-app.use(express.static(env.asset_path));
+app.use(express.static("./assets"));
 
 
-app.use(logger(env.morgan.mode, env.morgan.options));
+// app.use(logger(env.morgan.mode, env.morgan.options));
 
 // to extract the style and js from different layouts
 app.set('layout extractStyles', true);
